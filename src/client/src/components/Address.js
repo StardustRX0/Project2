@@ -51,26 +51,26 @@ class Address extends Component {
     generateAddress = () => {
         return (
             <>
-                <label htmlFor="send_good">آدرس ارسال محصول</label>
+                <label htmlFor="send_good">Shipping address</label>
                 <select onClick={this.handleInvoiceAddressChange} name="send_good" id='send_good'>
                     {this.props.address.length > 0 && this.props.address.map((address, index) => {
                         return <option key={index} name={address.id} value={address.id}>{address.address}</option>
                     })}
                 </select>
-                <label htmlFor="send_invoice">آدرس ارسال فاکتور</label>
+                <label htmlFor="send_invoice">Invoice address</label>
                 <select onClick={this.handleSendAddressChange} name="send_invoice" id='send_good'>
                     {this.props.address.length > 0 && this.props.address.map((address, index) => {
                         return <option key={index} name={address.id} value={address.id}>{address.address}</option>
                     })}
                 </select>
 
-                <label htmlFor="add_new_address">آدرس</label>
+                <label htmlFor="add_new_address">Address</label>
                 <input onChange={this.handleInputAddress} name='add_new_address' id='add_new_address'
                        value={this.state.address}/>
-                <label htmlFor="add_new_postal">کد پستی</label>
+                <label htmlFor="add_new_postal">Postal code</label>
                 <input onChange={this.handleInputPostal} type='number' name='add_new_postal' id='add_new_postal'
                        value={this.state.postal_code}/>
-                <button onClick={this.handleAddAddress} className='btn btn-primary'>افزودن آدرس جدید</button>
+                <button onClick={this.handleAddAddress} className='btn btn-primary'>Add new address</button>
             </>
         )
     }

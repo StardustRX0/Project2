@@ -45,9 +45,9 @@ class Account extends Component {
                 <nav>
                     <div className="nav nav-tabs" id="nav-tab" role="tablist">
                         <a className="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                           aria-controls="nav-home" aria-selected="true">اطلاعات کاربری</a>
+                           aria-controls="nav-home" aria-selected="true">User information</a>
                         <a className="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-                           aria-controls="nav-contact" aria-selected="false">پیشینه سفارشات</a>
+                           aria-controls="nav-contact" aria-selected="false">History</a>
                     </div>
                 </nav>
                 <div className="tab-content" id="nav-tabContent">
@@ -57,11 +57,11 @@ class Account extends Component {
                         <form>
                             <div className="form-group">
                                 <label htmlFor="fist_name">
-                                    نام:
+                                    First name:
                                 </label>
                                 <input type="text" name="first_name"/>
                                 <label htmlFor="last_name">
-                                    نام خانوادگی:
+                                    Last name:
                                 </label>
                                 <input type="text" name="last_name"/>
                                 {this.state.address && this.state.address.map((address,index)=>{

@@ -50,7 +50,7 @@
     margin-top: 10%;
 }
 .btnRegister{
-    float: right;
+    float: left;
     margin-top: 10%;
     border: none;
     border-radius: 1.5rem;
@@ -67,7 +67,7 @@
     background: #0062cc;
     border-radius: 1.5rem;
     width: 28%;
-    float: right;
+    float: left;
 }
 .register .nav-tabs .nav-link{
     padding: 2%;

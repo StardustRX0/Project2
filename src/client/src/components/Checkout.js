@@ -201,7 +201,7 @@ class Checkout extends Component {
                 <label htmlFor='discount'>Discount code</label>
                 <input type="text" id='discount' name="discount" value={this.state.discount}
                        onChange={this.handleChange}/>
-                <button className='btn btn-primary' onClick={this.checkDiscount}>ثبت</button>
+                <button className='btn btn-primary' onClick={this.checkDiscount}>Apply</button>
                 {console.log(this.state.discountValidation)}
                 {this.state.discountValidation && <h1>yes</h1>}
                 {!this.state.discountValidation && <h1>No</h1>}
@@ -247,7 +247,7 @@ class Checkout extends Component {
             delivery: this.state.delivery,
             address_to_send_good: this.state.address_to_send,
             address_to_send_invoice: this.state.address_to_invoice,
-            receive_time: "2021-11-18 13:24:46",
+            receive_time: " ",
             orders: this.reformatOrders(),
             payment_info: 1
         }

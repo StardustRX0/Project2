@@ -68,7 +68,7 @@ class Navbar extends Component {
             <nav className='navbar navbar-expand-lg navbar-light bg-light'>
                 <link rel="stylesheet"
                       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
-                <Link className="navbar-brand" to='#'>something</Link>
+                <Link className="navbar-brand" to='/'>Ecommerce</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">

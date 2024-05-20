@@ -121,7 +121,7 @@ class Register extends Component {
             <div className='card w-50 text-right mx-auto mt-3'>
                 {this.state.redirect && this.redirectToHome()}
                 <div className='card-header'>
-                    ثبت نام
+                    Register
                 </div>
                 <div className="card-body">
                     <form onSubmit={this.handleSubmit}>
@@ -146,7 +146,7 @@ class Register extends Component {
 
                 </div>
                 <div className="card-footer">
-                    //this is bottom
+                ---------------------
                 </div>
             </div>
         );
