@@ -105,7 +105,7 @@ class Media(models.Model):
     INLINE = 3
     IMAGE_TYPE = [
         (MAIN, 'main picture'),
-        (OTHER, 'other store pictures'),
+        (OTHER, 'other in-store pictures'),
         (INLINE, 'in content pictures'),
     ]
     picture_type = models.PositiveSmallIntegerField(choices=IMAGE_TYPE)

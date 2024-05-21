@@ -101,7 +101,7 @@ class ProductPage extends Component {
         return (
             <div>
                 <h1>{this.state.product.name}</h1>
-                <h2>{this.generatePrice()}</h2>
+                <h2>{this.generatePrice() + '$'}</h2>
                 {this.state.product.attributes && this.state.product.attributes.map((attr, index) => {
                     return (
                         <>
@@ -133,12 +133,12 @@ class ProductPage extends Component {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img className="d-block w-100" src={`http://127.0.0.1:8000${this.state.product.image}`}
-                             alt="First slide"/>
+                             alt="=image" style={{maxWidth: '500px', maxHeight: '1000px'}}/>
                     </div>
                     {this.state.product.media && this.state.product.media.map((picture, index) => {
                         return (
                             <div className="carousel-item">
-                                <img className="d-block w-100" src={`http://127.0.0.1:8000${picture}`}/>
+                                <img className="d-block w-100" src={`http://127.0.0.1:8000${picture}`} style={{maxWidth: '500px', maxHeight: '1000px'}}/>
                             </div>
                         )
 

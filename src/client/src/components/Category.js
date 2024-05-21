@@ -150,11 +150,11 @@ class Category extends Component {
         }
         return (
             <nav aria-label="...">
-                <ul className="pagination rtl">
-
+                <ul className="pagination">
                     <li className={this.generateClassFirstItem()}>
                         <a  onClick={() => this.setPage("prev")} className="page-link"  tabIndex="-1">previous</a>
                     </li>
+
                     {pages.map((page, index) => {
                         return <li key={index} className={this.getItemClasses(page)}>
                             <a onClick={() => this.setPage(page)} className="page-link">{page}</a>

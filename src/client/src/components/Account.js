@@ -59,22 +59,22 @@ class Account extends Component {
                                 <label htmlFor="fist_name">
                                     First name:
                                 </label>
-                                <input type="text" name="first_name"/>
+                                <input type="text" name="first_name"/> <br/>
                                 <label htmlFor="last_name">
                                     Last name:
                                 </label>
-                                <input type="text" name="last_name"/>
-                                {this.state.address && this.state.address.map((address,index)=>{
-                                    return <h1>hi</h1>
-                                })}
+                                <input type="text" name="last_name"/> <br/>
+                                <label htmlFor="address">
+                                    Address:
+                                </label>
+                                <input type="text" name="address" id="address" onChange={this.handleInputAddress}/> <br/>
                             </div>
                             <div className='form-group'>
-
+                                <button className='btn btn-primary' onClick={() => {this.updateUserForm(); this.updateAddress();}}>Save</button>
                             </div>
                         </form>
 
                     </div>
-
                     <div className="tab-pane fade" id="nav-contact" role="tabpanel"
                          aria-labelledby="nav-contact-tab">...
                     </div>

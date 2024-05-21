@@ -66,9 +66,9 @@ class Checkout extends Component {
         return (
             <tr>
                 <td>Total amount:</td>
+                <td></td>
+                <td></td>
                 <td>{this.totalPrice()}</td>
-                <td></td>
-                <td></td>
                 <td></td>
             </tr>
         )
@@ -88,9 +88,9 @@ class Checkout extends Component {
         return (
             <tr>
                 <td>Shipping cost:</td>
+                <td></td>
+                <td></td>
                 <td>{this.state.delivery_price}</td>
-                <td></td>
-                <td></td>
                 <td></td>
             </tr>
         )
@@ -112,9 +112,9 @@ class Checkout extends Component {
         return (
             <tr>
                 <td>Fee:</td>
+                <td></td>
+                <td></td>
                 <td>{parseInt(window.option_price)}</td>
-                <td></td>
-                <td></td>
                 <td></td>
             </tr>
         )
@@ -155,9 +155,9 @@ class Checkout extends Component {
                 {this.generateOptionTable()}
                 <tr>
                     <td>Total payment:</td>
+                    <td></td>
+                    <td></td>
                     <td>{this.finalPrice()}</td>
-                    <td></td>
-                    <td></td>
                     <td></td>
                 </tr>
 
@@ -198,10 +198,10 @@ class Checkout extends Component {
     generateCheckout = () => {
         return (
             <>
-                <label htmlFor='discount'>Discount code</label>
+                <label htmlFor='discount'>Discount code</label> <br/>
                 <input type="text" id='discount' name="discount" value={this.state.discount}
                        onChange={this.handleChange}/>
-                <button className='btn btn-primary' onClick={this.checkDiscount}>Apply</button>
+                <button className='btn btn-primary' style= {{height: '30px', display: 'flex', alignItems: 'center'}} onClick={this.checkDiscount}>Apply</button>
                 {console.log(this.state.discountValidation)}
                 {this.state.discountValidation && <h1>yes</h1>}
                 {!this.state.discountValidation && <h1>No</h1>}
@@ -260,7 +260,7 @@ class Checkout extends Component {
                 'Authorization': `token ${this.props.user ? this.props.user : localStorage.getItem('user')}`
             }
         }
-        const url = 'http://127.0.0.1:8000/card/card/'
+        const url = 'http://127.0.0.1:8000/card/card'
         fetch(url, option).then(response => response.json()).then(data => this.cardAdded(data))
     }
     reformatDiscount = () => {
@@ -297,8 +297,6 @@ class Checkout extends Component {
                 {this.props.orders.length > 0 && this.props.loggedIn &&
                 <button onClick={this.addCard} className='btn btn-primary'>Payment</button>}
                 {/*{this.props.loggedIn && this.generateCheckout() || this.generateLog()}*/}
-
-
             </div>
         );
     }

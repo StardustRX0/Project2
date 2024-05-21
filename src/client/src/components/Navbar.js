@@ -83,10 +83,10 @@ class Navbar extends Component {
                         {this.generateAccount()}
                         {this.generateCard()}
                     </ul>
-                    <form className="form-inline my-2 my-lg-0 mr-auto">
+                    {/*<form className="form-inline my-2 my-lg-0 mr-auto">
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+                    </form>*/}
 
                 </div>
             </nav>
@@ -143,7 +143,7 @@ class Navbar extends Component {
                         User account
                     </a>
                     <div className="dropdown-menu" aria-labelledby='navbarDropdown-account'>
-                        <Link to="#" className="dropdown-item">User information</Link>
+                        <Link to="/account" className="dropdown-item">Account</Link>
                         <Link to="#" onClick={this.logUserOut} className="dropdown-item">Exit</Link>
                     </div>
                 </li>
