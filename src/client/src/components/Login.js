@@ -74,7 +74,7 @@ class Login extends Component {
             this.setState({redirect:true})
         }
         return (
-            <div className='card w-50 text-right mx-auto mt-3'>
+            <div className='card w-50 text-left mx-auto mt-3'>
                 {this.state.redirect && this.redirectToHome()}
                 <div className='card-header'>
                     Login

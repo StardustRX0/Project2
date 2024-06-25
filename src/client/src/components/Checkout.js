@@ -216,7 +216,7 @@ class Checkout extends Component {
         this.props.redirectTo('/checkout')
         return (
             <>
-                <Link to='/login'>Login</Link>
+                <Link to='/login'>Login</Link> <br/>
                 <Link to="/register">Register</Link>
             </>
         )

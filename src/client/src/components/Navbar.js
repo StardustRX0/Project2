@@ -40,7 +40,7 @@ class Navbar extends Component {
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i className="bi bi-cart3"/><span className="badge badge-primary">{this.totalCard()}</span>
                 </a>
-                <div className="dropdown-menu" aria-labelledby='card'>
+                <div className="dropdown-menu" aria-labelledby='card' style={{padding: '10px'}}>
 
                     {this.props.orders && this.props.orders.length > 0 && this.props.orders.map((order, index) => {
                         return (
@@ -50,7 +50,9 @@ class Navbar extends Component {
                     })}
 
                     {/*{this.props.orders && this.props.orders.length === 1 && this.generateSingleOrder()}*/}
-                    <Link to='/checkout' className='btn btn-primary'>Cart</Link>
+                    <div style={{ position: 'relative', height: '30px' }}>
+                        <Link to='/checkout' className='btn btn-primary' style={{ position: 'absolute', right: 0, bottom: 0 }}>Cart</Link>
+                    </div>
 
                 </div>
             </li>
